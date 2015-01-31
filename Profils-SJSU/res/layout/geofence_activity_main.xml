@@ -1,0 +1,69 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   	android:background="@drawable/background"
+	android:scaleType = "centerCrop"
+	android:padding="10dp"
+        >
+
+    <View
+        android:id="@+id/view"
+        android:layout_gravity="center"
+        android:padding="30dp"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+         
+         />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="196dp"
+            android:background="#07a8a8a8"
+            android:thumb="@drawable/switch_thumb"
+            android:track="@drawable/switch_bg" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/switch1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="48dp"
+            android:background="#07a8a8a8"
+            android:gravity="center"
+            android:shadowColor="#AAAAAA"
+            android:shadowDx="1.5"
+            android:shadowDy="1"
+            android:text="@string/txtQ"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:typeface="serif" />
+
+        <Button
+            android:id="@+id/spartanBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/ic_launcher" />
+       
+    </RelativeLayout>
+
+</FrameLayout>

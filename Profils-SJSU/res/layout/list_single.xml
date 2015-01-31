@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="10dip" 
+    
+    >
+ 
+    <!--  ListRow Left side Thumbnail image -->
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/image_bg"
+        android:layout_marginRight="5dip"
+        >
+ 
+        <ImageButton
+            android:id="@+id/list_icon"
+            android:layout_width="75dip"
+            android:layout_height="75dip"
+            android:src="@drawable/itemicon"
+            android:clickable="true"
+            />
+ 
+    </LinearLayout>
+ 
+    <!-- Title Of Song-->
+    <TextView
+        android:id="@+id/list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="San Jose States"
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="17dip"
+        android:textStyle="bold"/>
+ 
+    <!-- Artist Name -->
+ 
+   
+ 
+     <!-- Rightend Arrow -->
+
+    <ImageButton
+        android:id="@+id/list_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/list_subtitile"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/editbtn"
+        android:background="#00ffffff"
+         />
+
+    <TextView
+        android:id="@+id/list_subtitile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list_title"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="will be on vibrate"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        
+         />
+
+    <Switch
+        android:id="@+id/list_enable_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail" 
+        android:checked="true"
+        />
+
+    <ImageButton
+        android:id="@+id/list_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/list_edit"
+        android:layout_below="@+id/list_edit"
+        android:src="@drawable/delete"
+        android:background="#00ffffff"
+        
+         />
+ 
+</RelativeLayout>

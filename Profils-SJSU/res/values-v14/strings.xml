@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Profils</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_github">GitHub</string>
+   <string name="header_title">Profils</string>
+    <string name="header_subtitle">Set Once, forget forever...</string>
+
+</resources>

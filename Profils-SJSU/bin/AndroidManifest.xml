@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.prasad.profilsworld"
+    android:versionCode="2"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <!-- Protect the map component of the application using application signature -->
+    <permission
+        android:name="com.prasad.profilsworld.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <!-- Allows to receive map -->
+    <uses-permission android:name="com.prasad.maps.permission.MAPS_RECEIVE" />
+
+    <!-- Used by the Google Maps Android API V2 to download map tiles from Google Maps servers -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Allows the Google Maps Android API V2 to cache map tile data in the device's external storage area -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Allows the Google Maps Android API V2 to use WiFi or mobile cell data (or both) to determine the device's location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!--
+    Allows the Google Maps Android API V2 to use the Global Positioning System (GPS) 
+    to determine the device's location to within a very small area
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+   <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    
+    <!-- Allows to contact Google Serves -->
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.prasad.geofence.MainGeofenceActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+              
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+           
+            
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service
+            android:name="com.prasad.geofence.ReceiveTransitionsIntentService"
+            android:exported="false" >
+        </service>
+
+       
+        <activity
+            android:name="com.prasad.maps.MapActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <!-- Points to searchable activity -->
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="com.prasad.maps.MapActivity" />
+
+            <!-- Points to searchable meta data -->
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="com.prasad.maps.EditMapActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <provider
+            android:name="com.prasad.maps.PlaceProvider"
+            android:authorities="com.prasad.profilsworld.PlaceProvider"
+            android:exported="false" />
+
+        <!-- Specifies the Android API Key, which is obtained from Google API Console -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCNhH8j1gw6nAbLDDhZqeLtacNOGrzTZMw" />
+
+        <activity
+            android:name="com.prasad.helpactivities.Onmaphelp"
+            android:label="@string/title_activity_onmaphelp"
+            android:theme="@style/Theme.Transparent"
+             >
+            
+          
+        </activity>
+        
+        <activity
+            android:name="com.prasad.viewpager.ViewPagerStyle1Activity"
+            android:label="@string/app_name" 
+                        android:theme="@style/Theme.Transparent"
+                          android:screenOrientation="portrait"
+                        >
+           
+        </activity>
+         <receiver android:name="com.prasad.geofence.OnBoot">
+    		<intent-filter>
+         		<action android:name="android.intent.action.BOOT_COMPLETED" />
+    		</intent-filter>        
+        </receiver>       
+    </application>
+
+</manifest>
