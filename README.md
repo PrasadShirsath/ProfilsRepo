@@ -10,7 +10,7 @@ Technologies used =>	Android, Geo-fencing, NoSQL in android, GSON, GoogleMapsV3.
 
 <a href="https://play.google.com/store/apps/details?id=com.prasad.profilsworld">
   <img alt="Get it on Google Play"
-       src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png" />
+       src="https://play.google.com/intl/en_us/badges/images/badge_new.png" />
 </a>
 
 <img src="https://github.com/PrasadShirsath/ProfilsRepo/blob/master/fa98d989-ab5c-417c-b756-b606df06ef18.png" width="400" height="600" />
